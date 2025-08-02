@@ -4,6 +4,8 @@ import { useState } from "react";
 import BookingSection from "@/components/property/BookingSection";
 import PropertyDetail from "@/components/property/PropertyDetail";
 import ReviewSection from "@/components/property/ReviewSection";
+//import Image from "next/image";
+import Slider from "@/components/common/Slider";
 
 export default function PropertyPage() {
   const router = useRouter();
@@ -20,6 +22,11 @@ export default function PropertyPage() {
   return (
     <div>
       <div className="container mx-auto px-4 py-6">
+        {/* Image Grid */}
+      <div className="">
+        <Slider gallery={property.gallery} />
+      </div>
+      
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Main content: Details & Reviews */}
         <div className="lg:col-span-2 space-y-6">
@@ -28,7 +35,7 @@ export default function PropertyPage() {
         </div>
 
         {/* Sidebar: Booking */}
-        <div className="lg:col-span-1">
+        <div className="lg:col-span-1 mt-6">
           <BookingSection
             price={property.price}
             checkIn={checkIn}

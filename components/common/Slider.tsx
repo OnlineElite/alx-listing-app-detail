@@ -27,7 +27,7 @@ const Slider: React.FC<GalleryProps> = ({ gallery }) => {
   }
 
   return (
-    <div className="w-full max-w-4xl mx-auto">
+    <div className="w-full max-w-full max-h-[80vw] mx-auto">
       {/* Main Image */}
       <div className="relative overflow-hidden">
         <Image

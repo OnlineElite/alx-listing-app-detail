@@ -1,6 +1,6 @@
 import { PropertyProps } from "@/interfaces/index";
 //import Image from "next/image";
-import  Slider from "@/components/common/Slider";
+//import  Slider from "@/components/common/Slider";
 
 const PropertyDetail: React.FC<{ property: PropertyProps }> = ({ property }) => {
   return (
@@ -12,9 +12,24 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({ property }) => 
       </div>
 
       {/* Image Grid */}
-      <div className=" mt-4">
+      {/* <div className="grid grid-flow-row-dense grid-cols-4 grid-rows-2 gap-2 mt-4">
+        <div className=" row-span-2 col-span-2 w-full h-full object-fill rounded-l-lg" >
+          <Image src={property.gallery[0]} alt={property.name} width={100} height={100} className="w-full h-full object-cover rounded-l-lg"/>
+        </div>
+        <div className=" col-span-2 w-full h-64 object-fill rounded-tr-lg">
+          <Image src={property.gallery[1]} alt={property.name} width={100} height={100} className="w-full h-full object-fill rounded-tr-lg"/>
+        </div>
+        <div className=" w-full max-h-25 object-fill ">
+          <Image src={property.gallery[2]} alt={property.name} width={100} height={100} className="w-full h-full object-fill "/>
+        </div>
+        <div className=" w-full max-h-25 object-fill rounded-br-lg" >
+          <Image src={property.gallery[1]} alt={property.name} width={100} height={100} className="w-full h-full bject-fill rounded-br-lg"/>
+        </div>
+      </div> */}
+      {/* <div className="w">
         <Slider gallery={property.gallery} />
-      </div>
+      </div> */}
+
 
       {/* Description */}
       <div className="mt-4">
