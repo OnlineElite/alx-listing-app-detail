@@ -40,9 +40,9 @@ const Card : React.FC<PropertyProps> = ({name, address, rating, category, price,
     return(
         <Link href={`/property/${name}`} className="no-underline">
             <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer">
-                <div className="relative h-48 overflow-hidden">
-                    <Image src={image}  alt={name} width={100} height={100}
-                    className="w-full h-full object-fill hover:scale-105 transition-transform duration-300"/>
+                <div className="relative w-full h-48 overflow-hidden">
+                    <Image src={image}  alt={name} fill
+                    className=" object-cover hover:scale-105 transition-transform duration-300"/>
                 </div>
                 <div className="mt-2">
                     {category.map((item, index)=> (

@@ -21,31 +21,31 @@ export default function PropertyPage() {
 
   return (
     <div>
-      <div className="container mx-auto px-4 py-6">
-        {/* Image Grid */}
-      <div className="">
-        <Slider gallery={property.gallery} />
-      </div>
-      
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Main content: Details & Reviews */}
-        <div className="lg:col-span-2 space-y-6">
-          <PropertyDetail property={property} />
-          <ReviewSection reviews={property.reviews} />
+      <div className="container mx-auto px-4 py-6 ">
+          {/* Image Grid */}
+        <div className="">
+          <Slider gallery={property.gallery} />
         </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Main content: Details & Reviews */}
+          <div className="lg:col-span-2 space-y-6">
+            <PropertyDetail property={property} />
+            <ReviewSection reviews={property.reviews} />
+          </div>
 
-        {/* Sidebar: Booking */}
-        <div className="lg:col-span-1 mt-6">
-          <BookingSection
-            price={property.price}
-            checkIn={checkIn}
-            checkOut={checkOut}
-            setCheckIn={setCheckIn}
-            setCheckOut={setCheckOut}
-          />
+          {/* Sidebar: Booking */}
+          <div className="lg:col-span-1 mt-6">
+            <BookingSection
+              price={property.price}
+              checkIn={checkIn}
+              checkOut={checkOut}
+              setCheckIn={setCheckIn}
+              setCheckOut={setCheckOut}
+            />
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }
